@@ -12,7 +12,8 @@ const apiUrl = 'https://lm-api-reads.fantasy.espn.com/apis/v3/games/fba/seasons/
 
         const data = await response.json();
         //const playerId = 4432816;
-        console.log(data.schedule.filter(p => p.matchupPeriodId === 1)[0].away.rosterForCurrentScoringPeriod.entries[1].playerPoolEntry.player);
+        console.log(data.schedule.filter(p => p.matchupPeriodId === 1)[0].away.cumulativeScore);
+        //console.log(data.schedule.filter(p => p.matchupPeriodId === 1)[0].away.rosterForCurrentScoringPeriod.entries[1].playerPoolEntry.player);
         console.log(data.schedule.filter(p => p.matchupPeriodId === 1)[0].away.teamId);
     } catch (error) {
         console.error('Error fetching data:', error);
